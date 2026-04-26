@@ -17,12 +17,12 @@ function fetchData(url) {
 
 (async () => {
     // Fetch anime from Jikan
-    const anime = await fetchData('https://api.jikan.moe/v4/top/anime?limit=50');
+    const anime = await fetchData('https://api.jikan.moe/v4/top/anime?limit=25');
     fs.writeFileSync(path.join(dataDir, 'anime.json'), JSON.stringify(anime, null, 2));
 
     await new Promise(r => setTimeout(r, 2000));
 
-    const seasonal = await fetchData('https://api.jikan.moe/v4/seasons/now?limit=50');
+    const seasonal = await fetchData('https://api.jikan.moe/v4/seasons/now?limit=25');
     fs.writeFileSync(path.join(dataDir, 'seasonal-anime.json'), JSON.stringify(seasonal, null, 2));
 
     console.log('✓ Data fetched successfully');
