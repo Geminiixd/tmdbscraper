@@ -1,0 +1,10 @@
+{
+  "status": 400,
+  "type": "ValidationException",
+  "messages": {
+    "limit": [
+      "Value 50 is higher than the configured '25' max value."
+    ]
+  },
+  "error": "Invalid or incomplete request. Make sure your request is correct. https://docs.api.jikan.moe/"
+}
